@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
 import Carregando from './Carregando';
 
@@ -38,6 +39,30 @@ class Header extends React.Component {
             </p>
           ) : <Carregando />
         }
+        <Link
+          to="/search"
+          data-testid="link-to-search"
+          className="nav-bar-ancor"
+          id="nav-bar-ancor-search"
+        >
+          Search
+        </Link>
+        <Link
+          to="/favorites"
+          data-testid="link-to-favorites"
+          className="nav-bar-ancor"
+          id="nav-bar-ancor-favorites"
+        >
+          Favorite List
+        </Link>
+        <Link
+          to="/profile"
+          data-testid="link-to-profile"
+          className="nav-bar-ancor"
+          id="nav-bar-ancor-profile"
+        >
+          Profile
+        </Link>
       </header>
     );
   }
