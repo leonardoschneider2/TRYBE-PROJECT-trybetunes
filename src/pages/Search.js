@@ -106,7 +106,12 @@ class Search extends React.Component {
                         $
                         <span>{ ` ${product.collectionPrice}` }</span>
                       </h4>
-                      <Link to={ `/album/${product.collectionId}` }>Veja Mais</Link>
+                      <Link
+                        data-testid={ `link-to-album-${product.collectionId}` }
+                        to={ `/album/${product.collectionId}` }
+                      >
+                        Veja Mais
+                      </Link>
                     </div>
                   ))
                 }
